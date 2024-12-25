@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block title%} BArcha gullar{%endblock%}
+
+{%block content%}
+<h1>Barcha gullar</h1>  
+<h1>Barcha gullar</h1>
+            {%for gul in gullar%}
+            <ul>
+                <li>{{gul.name}}</li>
+                <li>{{gul.description}}</li>
+                <li>{{gul.price}}</li>
+                <li>{{gul.turi}}</li>
+                <li>
+                    <a href="{% url 'delete_gul' gul.id %}">O'chirish</a>
+                </li>
+            </ul>
+            {%endfor%}
+{% endblock %}

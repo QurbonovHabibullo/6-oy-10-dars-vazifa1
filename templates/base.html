@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/gullar/">Barcha Gullar</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <h1><p>&copy; 2025 yilga ochilishi kutilayotgan gullar dokoni</p></h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Turni yangilash{% endblock %}
+
+{% block content %}
+  <h1>{{ tur.name }} turini yangilash</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Yangilash</button>
+  </form>
+  <br>
+  <a href="{% url 'turlar_list' %}">Orqaga</a>
+{% endblock %}

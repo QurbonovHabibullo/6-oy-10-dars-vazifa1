@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}%Barcha gullarni turlari{% endblock  %}
+
+{%block content%}
+<h1>Barcha gullarni turlari</h1>
+        {%for tur in turlar%}
+        <ul>
+            <li>
+               <a href="{% url 'tur_by_gullar' tur.id %}">{{tur.name}} </a>
+               <a href="{% url 'delete_tur' tur.id %}">O'chirish</a>
+            </li>
+        </ul>
+        {%endfor%}
+{% endblock%}

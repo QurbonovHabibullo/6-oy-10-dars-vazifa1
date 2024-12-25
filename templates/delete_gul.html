@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ gul.name }} gulini o'chirish</h1>
+  <p>Ushbu gulni o'chirishga ishonchingiz komilmi?</p>
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit">O'chirish</button>
+  </form>
+  <a href="{% url 'gullar_list' %}">Bekor qilish</a>
+{% endblock %}
+

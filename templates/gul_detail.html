@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+{% block title%}{{ gul.name }} - Batafsil{%endblock%}
+
+{% block content%}
+    <h1>{{ gul.name }}</h1>
+    <p><strong>Ta'rifi:</strong> {{ gul.description }}</p>
+    <p><strong>Narxi:</strong> {{ gul.price }}</p>
+    <p><strong>Turi:</strong> {{ gul.turi.name }}</p>
+    <a href="{% url 'tur_by_gullar' gul.turi.id %}">Orqaga qaytish</a>
+
+{%endblock%}
