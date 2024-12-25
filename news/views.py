@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from .models import Turlar,Gullar
 from .forms import TurForm,GulForm
 
+
 # Create your views here.
 def turlar_list(request):
     turlar = Turlar.objects.all()
@@ -105,3 +106,5 @@ def delete_gul(request, gul_id):
         gul.delete() 
         return redirect('/')
     return render(request, 'delete_gul.html', {'gul': gul})
+
+
